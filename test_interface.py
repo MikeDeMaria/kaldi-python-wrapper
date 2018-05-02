@@ -1,8 +1,8 @@
 import subprocess
 import os
 orig_dir = os.getcwd()
-path_to_decoder = "/pykaldi/tools/kaldi/egs/aspire/s5"
-path_to_wav_file = "/pykaldi/tools/kaldi/egs/aspire/s5/short_sample.wav"
+path_to_decoder = "/kaldi/egs/aspire/s5"
+path_to_wav_file = "/kaldi/egs/aspire/s5/short_sample.wav"
 os.chdir(path_to_decoder)
 decode_commands = "sh decode_test2.sh " + path_to_wav_file
 dirty_transcript = subprocess.check_output([decode_commands],cwd=path_to_decoder, shell=True, stderr=subprocess.STDOUT)#,check=True)
