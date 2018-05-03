@@ -15,9 +15,9 @@ def speechToText(file):
     os.chdir(path_to_decoder)
 
     decode_commands = "sh decode_test.sh " + path_to_audio + "/" + file
-    print(\n)
+	print()
     print("Processing...")
-    print(\n)
+	print()
     dirty_transcript = subprocess.check_output([decode_commands],cwd = path_to_decoder, shell = True, stderr = subprocess.STDOUT)
 
     transcript = ""
@@ -28,6 +28,8 @@ def speechToText(file):
             textfile.write(transcript)
             textfile.close()
             print("Text outputed as " + path_to_text + "/" + os.path.splitext(os.path.basename(file))[0] + ".txt")
+			print()
+			print("test for Alex")
             break
 
 onlyfiles = [f for f in listdir(path_to_audio) if isfile(join(path_to_audio, f))]
