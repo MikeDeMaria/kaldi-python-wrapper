@@ -8,7 +8,7 @@ path_to_audio = "/usr/local/audio_files"
 def speechToText(file):
     orig_dir = os.getcwd()
     
-	path_to_decoder = "/usr/local/kaldi/egs/aspire/s5"
+    path_to_decoder = "/usr/local/kaldi/egs/aspire/s5"
     path_to_audio   = "/usr/local/audio_files"
     path_to_text    = "/usr/local/audio_text"
 
@@ -28,7 +28,7 @@ def speechToText(file):
             textfile.write(transcript)
             textfile.close()
             print("Text outputed as " + path_to_text + "/" + os.path.splitext(os.path.basename(file))[0] + ".txt")
-			break
+            break
 
 onlyfiles = [f for f in listdir(path_to_audio) if isfile(join(path_to_audio, f))]
 
