@@ -29,7 +29,6 @@ def speechToText(file):
             textfile.close()
             print("Text outputed as " + path_to_text + "/" + os.path.splitext(os.path.basename(file))[0] + ".txt")
 			print()
-			print("test for Alex")
             break
 
 onlyfiles = [f for f in listdir(path_to_audio) if isfile(join(path_to_audio, f))]
